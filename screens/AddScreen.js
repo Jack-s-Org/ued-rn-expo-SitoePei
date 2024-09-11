@@ -33,7 +33,7 @@ const AddScreen = ({ navigation }) => {
 
         <Pressable
           onPress={() => {
-            // navigation.replace("LiveRecording", { screen: "Home" });
+            navigation.replace("KeyboardScreen");
           }}
         >
           <Image
@@ -41,6 +41,7 @@ const AddScreen = ({ navigation }) => {
             style={{ width: 205, height: 125, marginLeft: -18 }}
           />
         </Pressable>
+
         <Image
           source={require("@/assets/pics/Drums.png")}
           style={styles.image}

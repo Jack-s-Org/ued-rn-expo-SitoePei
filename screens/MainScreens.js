@@ -13,6 +13,7 @@ import AddScreen from "./AddScreen";
 import { Image } from "react-native";
 import AddTrackNavigator from "./AddTrackNavigator";
 import AssignmentScreen from "./AssignmentScreen";
+import PianoScreen from "./PianoScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -139,7 +140,7 @@ const MainTabs = ({ navigation }) => {
 
 const MainScreens = () => {
   return (
-    <MainStacks.Navigator>
+    <MainStacks.Navigator screenOptions={{ headerShown: false }}>
       <MainStacks.Screen
         name="MainTabs"
         component={MainTabs}
@@ -153,6 +154,11 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="Settings"
         component={SettingsScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+      <MainStacks.Screen
+        name="KeyboardScreen"
+        component={PianoScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>
