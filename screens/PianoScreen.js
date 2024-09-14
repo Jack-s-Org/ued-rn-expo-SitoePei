@@ -10,10 +10,10 @@ import React, { useState } from "react";
 import Piano from "../components/Piano";
 
 const PianoScreen = ({ navigation }) => {
-  const [activeLane, setActiveLane] = useState("lane1");
+  const [activeLane, setActiveLane] = useState("lane4");
   return (
     <ImageBackground
-      source={require("@/assets/pics/HomeBg.png")}
+      source={require("@/assets/pics/HomeBg02.png")}
       style={styles.image}
     >
       <View style={styles.header}>
@@ -59,6 +59,9 @@ const PianoScreen = ({ navigation }) => {
       </View>
       <View style={styles.musicContainer3}>
         <Image source={require("@/assets/pics/BlueContainer.png")} />
+      </View>
+      <View style={styles.musicContainer4}>
+        <Image source={require("@/assets/pics/PurpleContainer.png")} />
       </View>
 
       <Pressable
@@ -109,6 +112,22 @@ const PianoScreen = ({ navigation }) => {
         </View>
       </Pressable>
 
+      <Pressable
+        onPress={() => {
+          setActiveLane("lane4");
+        }}
+      >
+        <View style={styles.pianoSelection02}>
+          <Image
+            source={
+              activeLane === "lane4"
+                ? require("@/assets/pics/PianoSelection.png")
+                : require("@/assets/pics/PianoSelectionOff.png")
+            }
+          />
+        </View>
+      </Pressable>
+
       <View style={styles.string}>
         <Image source={require("@/assets/pics/TrackString.png")} />
       </View>
@@ -136,6 +155,16 @@ const PianoScreen = ({ navigation }) => {
       <View style={styles.rightButton}>
         <Image source={require("@/assets/pics/RightArrow.png")} />
       </View>
+
+      <Pressable
+        onPress={() => {
+          navigation.replace("Main", { screen: "Home" });
+        }}
+      >
+        <View style={styles.whiteCloseButton}>
+          <Image source={require("@/assets/pics/WhiteCloseButton.png")} />
+        </View>
+      </Pressable>
     </ImageBackground>
   );
 };
@@ -185,41 +214,52 @@ const styles = StyleSheet.create({
     marginTop: 1,
     marginLeft: 77,
   },
+  musicContainer4: {
+    marginTop: 1,
+    marginLeft: 250,
+  },
   pianoSelection: {
-    marginTop: -218,
+    marginTop: -291,
   },
   violinSelection: {
-    marginTop: -145,
+    marginTop: -218,
   },
   drumSelection: {
-    marginTop: -72,
+    marginTop: -145,
+  },
+  pianoSelection02: {
+    marginTop: -71,
   },
   string: {
-    marginTop: -290,
-    marginLeft: 194,
+    marginTop: -364,
+    marginLeft: 247,
   },
   piano: {
-    marginTop: -42,
+    marginTop: -169,
     height: 1,
   },
   pianoBox: {
-    marginTop: -222,
+    marginTop: -93,
   },
   effectsButton: {
-    marginTop: -45,
+    marginTop: -44,
     marginLeft: 290,
   },
   instrumentType: {
-    marginTop: -33,
-    marginLeft: 25,
+    marginTop: -34,
+    marginLeft: 23,
   },
   leftButton: {
     marginTop: -24,
-    marginLeft: 170,
+    marginLeft: 164,
   },
   rightButton: {
     marginTop: -15,
-    marginLeft: 200,
+    marginLeft: 195,
+  },
+  whiteCloseButton: {
+    marginTop: -58,
+    marginLeft: 22,
   },
 });
 

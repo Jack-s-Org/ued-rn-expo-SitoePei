@@ -215,7 +215,7 @@ export default class App extends React.Component {
                 }
               }
             >
-              <Image source={require("@/assets/pics/WhiteUpperKeyBig.png")} />
+              <Image source={require("@/assets/pics/WhiteUpperKeyRight.png")} />
             </View>
             <View
               style={
@@ -307,7 +307,7 @@ export default class App extends React.Component {
                 }
               }
             >
-              <Image source={require("@/assets/pics/WhiteUpperKeyBig.png")} />
+              <Image source={require("@/assets/pics/WhiteUpperKeyRight.png")} />
             </View>
           </View>
 
@@ -433,7 +433,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#F5FCFF",

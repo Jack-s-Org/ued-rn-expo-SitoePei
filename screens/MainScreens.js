@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import HomeScreen from "./HomeScreen";
-import NotificationsScreen from "./NotificationsScreen";
+import NotificationsScreen from "./CameraScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import MeScreen from "./MeScreen";
@@ -14,6 +14,7 @@ import { Image } from "react-native";
 import AddTrackNavigator from "./AddTrackNavigator";
 import AssignmentScreen from "./AssignmentScreen";
 import PianoScreen from "./PianoScreen";
+import CameraScreen from "./CameraScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -93,8 +94,9 @@ const MainTabs = ({ navigation }) => {
 
       <Tab.Screen
         name="Inbox"
-        component={NotificationsScreen}
+        component={CameraScreen}
         options={{
+          tabBarStyle: { display: "none" },
           tabBarIcon: ({ focused, color, size }) => (
             <Image
               source={

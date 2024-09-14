@@ -21,13 +21,10 @@ const LiveRecordScreen = ({ navigation }) => {
       </Text>
 
       <View style={styles.container3}>
-        <Image source={require("@/assets/pics/OnBoardingPic03.png")} />
+        <Image source={require("@/assets/pics/SoundWave.png")} />
       </View>
 
-      <Text style={styles.container4}>
-        Music is not a piece of paper where you just put down the notes. It's an
-        expression of your soul, your emotions.
-      </Text>
+      <Text style={styles.container4}>2 : 16</Text>
 
       <Pressable
         onPress={() => {
@@ -36,14 +33,19 @@ const LiveRecordScreen = ({ navigation }) => {
         }}
       >
         <Image
-          source={require("@/assets/pics/get-started-button.png")}
+          source={require("@/assets/pics/PlayButton.png")}
           style={{
-            // opacity: pressed ? 0.8 : 1,
-            marginTop: 20,
-            marginLeft: 110,
+            marginLeft: 155,
           }}
         />
       </Pressable>
+
+      <View style={styles.bin}>
+        <Image source={require("@/assets/pics/RubbishButton.png")} />
+      </View>
+      <View style={styles.stopButton}>
+        <Image source={require("@/assets/pics/StopButton.png")} />
+      </View>
     </SafeAreaView>
   );
 };
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
   backButton: {
     alignItems: "flex-start",
     marginLeft: 20,
-    marginTop: -28,
+    marginTop: 45,
   },
 
   container: {
@@ -84,22 +86,30 @@ const styles = StyleSheet.create({
   },
 
   container3: {
-    alignItems: "right",
-    marginLeft: 74,
-    marginTop: 80,
+    alignItems: "center",
+    marginTop: 110,
   },
 
   container4: {
     alignItems: "center",
-    marginLeft: 62,
-    marginTop: 30,
-    fontFamily: "SFUIText-Light",
-    fontSize: 14,
+    marginTop: 142,
+    fontFamily: "SFUIText-Bold",
+    fontWeight: "bold",
+    fontSize: 40,
     color: "#5A5A5A",
-    fontStyle: "light",
-    fontWeight: "300",
     textAlign: "center",
-    width: "72%",
+  },
+
+  bin: {
+    marginTop: 30,
+    marginLeft: 75,
+    marginBottom: 2,
+  },
+
+  stopButton: {
+    marginTop: -65,
+    marginLeft: 305,
+    marginBottom: 40,
   },
 });
 
