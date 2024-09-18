@@ -18,7 +18,11 @@ const AssignmentScreen = ({ navigation }) => {
         }}
       >
         <View style={styles.backButton}>
-          <Image source={require("@/assets/pics/BackButton.png")} />
+          <Image
+            source={require("@/assets/pics/BackButton.png")}
+            resizeMode="stretch"
+            style={{ width: 40, height: 40 }}
+          />
         </View>
       </Pressable>
 

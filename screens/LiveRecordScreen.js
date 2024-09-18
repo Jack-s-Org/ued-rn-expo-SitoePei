@@ -10,7 +10,11 @@ const LiveRecordScreen = ({ navigation }) => {
         }}
       >
         <View style={styles.backButton}>
-          <Image source={require("@/assets/pics/BackButton.png")} />
+          <Image
+            source={require("@/assets/pics/BackButton.png")}
+            resizeMode="stretch"
+            style={{ width: 40, height: 40 }}
+          />
         </View>
       </Pressable>
 
@@ -28,8 +32,7 @@ const LiveRecordScreen = ({ navigation }) => {
 
       <Pressable
         onPress={() => {
-          // Alert.alert("I'm impressed!");
-          navigation.replace("OnBoarding02", { screen: "Home" });
+          // navigation.replace("OnBoarding02", { screen: "Home" });
         }}
       >
         <Image

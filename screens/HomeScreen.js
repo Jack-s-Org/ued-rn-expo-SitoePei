@@ -22,25 +22,53 @@ const HomeScreen = ({ navigation }) => {
 
       <View style={styles.iconContainer}>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/MenuIcon.png")} />
+          <Image
+            source={require("@/assets/pics/MenuIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/ToolsIcon.png")} />
+          <Image
+            source={require("@/assets/pics/ToolsIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/RecordIcon.png")} />
+          <Image
+            source={require("@/assets/pics/RecordIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/BackwardIcon.png")} />
+          <Image
+            source={require("@/assets/pics/BackwardIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/PlayIcon.png")} />
+          <Image
+            source={require("@/assets/pics/PlayIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/BackIcon.png")} />
+          <Image
+            source={require("@/assets/pics/BackIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
         <View style={styles.icon}>
-          <Image source={require("@/assets/pics/NextIcon.png")} />
+          <Image
+            source={require("@/assets/pics/NextIcon.png")}
+            resizeMode="stretch"
+            style={{ width: 85, height: 85, marginTop: -10 }}
+          />
         </View>
       </View>
 
