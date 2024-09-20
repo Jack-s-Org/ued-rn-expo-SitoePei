@@ -10,7 +10,14 @@ const AddScreen = ({ navigation }) => {
         }}
       >
         <View style={styles.closeIcon}>
-          <Image source={require("@/assets/pics/CloseButtonIcon.png")} />
+          <Image
+            source={require("@/assets/pics/CloseButtonIcon.png")}
+            style={{
+              width: 24,
+              height: 24,
+            }}
+            resizeMode="stretch"
+          />
         </View>
       </Pressable>
 

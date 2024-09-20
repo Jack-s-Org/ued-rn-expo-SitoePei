@@ -59,69 +59,66 @@ const CameraScreen = ({ navigation }) => {
           source={require("@/assets/pics/FlashIcon.png")}
         />
       </View>
-      <Text style={styles.text1}>TIC</Text>
-      <Text style={styles.text2}>VIDEO</Text>
-      <Text style={styles.text3}>LIVE RECORD</Text>
-      <Text style={styles.text4}>PHOTO</Text>
 
-      <View style={styles.box}>
+      <View
+        style={[
+          {
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginTop: 620,
+            width: 250,
+            marginLeft: 90,
+          },
+        ]}
+      >
+        <Text style={styles.text1}>TIC</Text>
+        <Text style={styles.text2}>VIDEO</Text>
         <TouchableOpacity onPress={slideUp}>
-          <Text
-            style={{
-              fontFamily: "SFUIText-Light",
-              fontSize: 12,
-              color: "#FBFBFC",
-              fontStyle: "light",
-              fontWeight: "300",
-              marginTop: -99,
-              marginLeft: 37,
-            }}
-          >
-            LIVE RECORD
-          </Text>
+          <Text style={styles.text3}>LIVE RECORD</Text>
         </TouchableOpacity>
-
-        {isVisible && (
-          <Animated.View
-            style={[
-              styles.messageBox,
-              { transform: [{ translateY: slideAnim }] },
-            ]}
-          >
-            <Text style={styles.smartGlassesText}>
-              Pair your Smart Glasses to start the brand new experience.
-            </Text>
-
-            <Text style={styles.smartGlassesTextNumber2}>1.</Text>
-            <Text style={styles.smartGlassesText2}>
-              First of all, make sure your smart glasses are charged and turned
-              on.
-            </Text>
-
-            <Text style={styles.smartGlassesTextNumber3}>2.</Text>
-            <Text style={styles.smartGlassesText3}>
-              Secondly, make sure your phone device have Bluetooth on for
-              pairing the smart device.
-            </Text>
-
-            <Text style={styles.smartGlassesTextNumber4}>3.</Text>
-            <Text style={styles.smartGlassesText4}>
-              Tap ‘Done’ once you’ve completed the steps above.
-            </Text>
-            <TouchableOpacity onPress={slideDown}>
-              <Image
-                source={require("@/assets/pics/DoneButton.png")}
-                style={{
-                  width: 100,
-                  height: 80,
-                  marginTop: 10,
-                }}
-                resizeMode="stretch"
-              />
-            </TouchableOpacity>
-          </Animated.View>
-        )}
+        <Text style={styles.text4}>PHOTO</Text>
       </View>
+
+      {isVisible && (
+        <Animated.View
+          style={[
+            styles.messageBox,
+            { transform: [{ translateY: slideAnim }] },
+          ]}
+        >
+          <Text style={styles.smartGlassesText}>
+            Pair your Smart Glasses to start the brand new experience.
+          </Text>
+
+          <Text style={styles.smartGlassesTextNumber2}>1.</Text>
+          <Text style={styles.smartGlassesText2}>
+            First of all, make sure your smart glasses are charged and turned
+            on.
+          </Text>
+
+          <Text style={styles.smartGlassesTextNumber3}>2.</Text>
+          <Text style={styles.smartGlassesText3}>
+            Secondly, make sure your phone device have Bluetooth on for pairing
+            the smart device.
+          </Text>
+
+          <Text style={styles.smartGlassesTextNumber4}>3.</Text>
+          <Text style={styles.smartGlassesText4}>
+            Tap ‘Done’ once you’ve completed the steps above.
+          </Text>
+          <TouchableOpacity onPress={slideDown}>
+            <Image
+              source={require("@/assets/pics/DoneButton.png")}
+              style={{
+                width: 100,
+                height: 80,
+                marginTop: 10,
+              }}
+              resizeMode="stretch"
+            />
+          </TouchableOpacity>
+        </Animated.View>
+      )}
     </SafeAreaView>
   );
 };
@@ -143,47 +140,32 @@ const styles = StyleSheet.create({
     height: 26,
   },
   text1: {
-    marginTop: 620,
     fontFamily: "SFUIText-Light",
     fontSize: 12,
     color: "#FBFBFC",
     fontStyle: "light",
     fontWeight: "300",
-    textAlign: "center",
-    marginLeft: -240,
   },
   text2: {
-    marginTop: 715,
     fontFamily: "SFUIText-Light",
     fontSize: 12,
     color: "#FBFBFC",
     fontStyle: "light",
     fontWeight: "300",
-    textAlign: "center",
-    position: "absolute",
-    marginLeft: 130,
   },
   text3: {
-    marginTop: 715,
     fontFamily: "SFUIText-Light",
     fontSize: 12,
     color: "#FBFBFC",
     fontStyle: "light",
     fontWeight: "300",
-    textAlign: "center",
-    position: "absolute",
-    marginLeft: 195,
   },
   text4: {
-    marginTop: 715,
     fontFamily: "SFUIText-Light",
     fontSize: 12,
     color: "#FBFBFC",
     fontStyle: "light",
     fontWeight: "300",
-    textAlign: "center",
-    position: "absolute",
-    marginLeft: 300,
   },
   smartGlassesText: {
     marginTop: -10,

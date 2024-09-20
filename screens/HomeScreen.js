@@ -73,20 +73,55 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.timeline}>
-        <Image source={require("@/assets/pics/Timeline.png")} />
+        <Image
+          source={require("@/assets/pics/Timeline.png")}
+          style={{
+            width: 353,
+            height: 17,
+          }}
+          resizeMode="stretch"
+        />
       </View>
       <View style={styles.timeline}>
-        <Image source={require("@/assets/pics/SliderBar.png")} />
+        <Image
+          source={require("@/assets/pics/SliderBar.png")}
+          style={{
+            width: 241,
+            height: 10,
+          }}
+          resizeMode="stretch"
+        />
       </View>
 
       <View style={styles.musicContainer}>
-        <Image source={require("@/assets/pics/YellowContainer.png")} />
+        <Image
+          source={require("@/assets/pics/YellowContainer.png")}
+          style={{
+            width: 120,
+            height: 72,
+          }}
+          resizeMode="stretch"
+        />
       </View>
       <View style={styles.musicContainer2}>
-        <Image source={require("@/assets/pics/RedContainer.png")} />
+        <Image
+          source={require("@/assets/pics/RedContainer.png")}
+          style={{
+            width: 123,
+            height: 72,
+          }}
+          resizeMode="stretch"
+        />
       </View>
       <View style={styles.musicContainer3}>
-        <Image source={require("@/assets/pics/BlueContainer.png")} />
+        <Image
+          source={require("@/assets/pics/BlueContainer.png")}
+          style={{
+            width: 71,
+            height: 72,
+          }}
+          resizeMode="stretch"
+        />
       </View>
 
       <Pressable
@@ -101,6 +136,11 @@ const HomeScreen = ({ navigation }) => {
                 ? require("@/assets/pics/PianoSelection.png")
                 : require("@/assets/pics/PianoSelectionOff.png")
             }
+            style={{
+              width: 77,
+              height: 72,
+            }}
+            resizeMode="stretch"
           />
         </View>
       </Pressable>
@@ -117,6 +157,11 @@ const HomeScreen = ({ navigation }) => {
                 ? require("@/assets/pics/ViolinSelectionOn.png")
                 : require("@/assets/pics/ViolinSelection.png")
             }
+            style={{
+              width: 77,
+              height: 72,
+            }}
+            resizeMode="stretch"
           />
         </View>
       </Pressable>
@@ -133,12 +178,24 @@ const HomeScreen = ({ navigation }) => {
                 ? require("@/assets/pics/DrumSelectionOn.png")
                 : require("@/assets/pics/DrumSelection.png")
             }
+            style={{
+              width: 77,
+              height: 72,
+            }}
+            resizeMode="stretch"
           />
         </View>
       </Pressable>
 
       <View style={styles.string}>
-        <Image source={require("@/assets/pics/TrackString.png")} />
+        <Image
+          source={require("@/assets/pics/TrackString.png")}
+          style={{
+            width: 7,
+            height: 800,
+          }}
+          resizeMode="stretch"
+        />
       </View>
     </ImageBackground>
   );

@@ -20,7 +20,14 @@ const InviteScreen = ({ navigation }) => {
         }}
       >
         <View style={styles.closeIcon}>
-          <Image source={require("@/assets/pics/CloseButtonIcon.png")} />
+          <Image
+            source={require("@/assets/pics/CloseButtonIcon.png")}
+            style={{
+              width: 24,
+              height: 24,
+            }}
+            resizeMode="stretch"
+          />
         </View>
       </Pressable>
 
@@ -40,7 +47,10 @@ const InviteScreen = ({ navigation }) => {
           style={{
             marginTop: 0,
             marginLeft: 10,
+            width: 145,
+            height: 80,
           }}
+          resizeMode="stretch"
         />
       </Pressable>
 
@@ -71,12 +81,22 @@ const InviteScreen = ({ navigation }) => {
           style={{
             marginTop: 0,
             marginLeft: 10,
+            width: 134,
+            height: 80,
           }}
+          resizeMode="stretch"
         />
       </Pressable>
 
       <View style={styles.container5}>
-        <Image source={require("@/assets/pics/InvitePagePic02.png")} />
+        <Image
+          source={require("@/assets/pics/InvitePagePic02.png")}
+          style={{
+            width: 333,
+            height: 400,
+          }}
+          resizeMode="stretch"
+        />
       </View>
     </SafeAreaView>
   );
@@ -92,7 +112,7 @@ const styles = StyleSheet.create({
   closeIcon: {
     alignItems: "flex-end",
     marginRight: 30,
-    marginTop: 50,
+    marginTop: 55,
   },
 
   container1: {
@@ -142,6 +162,7 @@ const styles = StyleSheet.create({
   container5: {
     lignItems: "right",
     marginLeft: 97,
+    marginBottom: 35,
   },
 
   input: {

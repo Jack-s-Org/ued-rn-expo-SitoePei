@@ -15,7 +15,11 @@ const OnBoardingScreen02 = ({ navigation }) => {
       >
         <View style={{ alignItems: "center" }}>
           <View style={styles.container3}>
-            <Image source={require("@/assets/pics/OnBoardingPic02.png")} />
+            <Image
+              source={require("@/assets/pics/OnBoardingPic02.png")}
+              resizeMode="stretch"
+              style={{ width: 356, height: 410 }}
+            />
           </View>
 
           <Text style={styles.container2}>Live Instrument Recorder</Text>
@@ -50,7 +54,7 @@ const styles = StyleSheet.create({
   container3: {
     alignItems: "right",
     marginLeft: 74,
-    marginTop: 110,
+    marginTop: 135,
   },
 
   container2: {

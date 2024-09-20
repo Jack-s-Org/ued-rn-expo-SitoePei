@@ -42,17 +42,13 @@ const MainTabs = ({ navigation }) => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Image
-              source={
-                focused
-                  ? require("@/assets/pics/HomeIcon.png")
-                  : require("@/assets/pics/HomeOutlineIcon.png")
-              }
-              size={size}
-              color={color}
-            />
-          ),
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconame = focused
+              ? require("@/assets/pics/HomeIcon.png")
+              : require("@/assets/pics/HomeOutlineIcon.png");
+
+            return <Image style={{ height: 60, width: 60 }} source={iconame} />;
+          },
           tabBarLabel: "HOME",
         }}
       />
@@ -70,6 +66,11 @@ const MainTabs = ({ navigation }) => {
               }
               size={size}
               color={color}
+              style={{
+                width: 65,
+                height: 65,
+              }}
+              resizeMode="stretch"
             />
           ),
           tabBarLabel: "ASSIGNMENT",
@@ -85,6 +86,11 @@ const MainTabs = ({ navigation }) => {
               source={require("@/assets/pics/AddIcon.png")}
               size={36}
               color={color}
+              style={{
+                width: 118,
+                height: 110,
+              }}
+              resizeMode="stretch"
             />
             // <Ionicons name="add" size={36} color={color} />
           ),
@@ -106,6 +112,11 @@ const MainTabs = ({ navigation }) => {
               }
               size={size}
               color={color}
+              style={{
+                width: 65,
+                height: 65,
+              }}
+              resizeMode="stretch"
             />
           ),
           tabBarLabel: "CAMERA",
@@ -131,6 +142,11 @@ const MainTabs = ({ navigation }) => {
               }
               size={size}
               color={color}
+              style={{
+                width: 65,
+                height: 65,
+              }}
+              resizeMode="stretch"
             />
           ),
           tabBarLabel: "INVITE",

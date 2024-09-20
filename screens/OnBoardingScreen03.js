@@ -15,7 +15,11 @@ const OnBoardingScreen03 = ({ navigation }) => {
       >
         <View style={{ alignItems: "center" }}>
           <View style={styles.container3}>
-            <Image source={require("@/assets/pics/OnBoardingPic03.png")} />
+            <Image
+              source={require("@/assets/pics/OnBoardingPic03.png")}
+              resizeMode="stretch"
+              style={{ width: 275, height: 260 }}
+            />
           </View>
 
           <Text style={styles.container2}>
@@ -59,7 +63,7 @@ const styles = StyleSheet.create({
   },
 
   container2: {
-    marginTop: 100,
+    marginTop: 80,
     textAlign: "center",
     fontFamily: "SFUIText-Bold",
     fontSize: 16,

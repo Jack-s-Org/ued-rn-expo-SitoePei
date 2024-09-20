@@ -10,7 +10,14 @@ const MeScreen = ({ navigation }) => {
         }}
       >
         <View style={styles.container2}>
-          <Image source={require("@/assets/pics/CloseButtonIcon.png")} />
+          <Image
+            source={require("@/assets/pics/CloseButtonIcon.png")}
+            style={{
+              width: 24,
+              height: 24,
+            }}
+            resizeMode="stretch"
+          />
         </View>
       </Pressable>
 
@@ -32,7 +39,14 @@ const MeScreen = ({ navigation }) => {
       </View>
 
       <View style={styles.container5}>
-        <Image source={require("@/assets/pics/InvitePagePic01.png")} />
+        <Image
+          source={require("@/assets/pics/InvitePagePic01.png")}
+          style={{
+            width: 203,
+            height: 126,
+          }}
+          resizeMode="stretch"
+        />
       </View>
 
       <Text style={styles.container6}>Collaborate with other artists</Text>
@@ -49,8 +63,10 @@ const MeScreen = ({ navigation }) => {
         <Image
           source={require("@/assets/pics/PlusInviteButton.png")}
           style={{
-            marginTop: 20,
-            marginLeft: 160,
+            marginTop: 30,
+            marginLeft: 153,
+            width: 130,
+            height: 70,
           }}
         />
       </Pressable>
@@ -60,15 +76,14 @@ const MeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   bgcolor: {
-    flex: 1,
-    justifyContent: "center",
     backgroundColor: "#E9EDF0",
+    height: 932,
   },
 
   container2: {
     alignItems: "flex-end",
     marginRight: 30,
-    marginTop: -200,
+    marginBottom: 160,
   },
 
   container3: {
@@ -95,7 +110,7 @@ const styles = StyleSheet.create({
 
   container5: {
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 25,
   },
 
   container6: {

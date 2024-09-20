@@ -19,7 +19,11 @@ const SignInScreen = ({ navigation }) => {
       <Text style={styles.container2}>GarageBand</Text>
 
       <View style={styles.container3}>
-        <Image source={require("@/assets/pics/OnBoardingPic01.png")} />
+        <Image
+          source={require("@/assets/pics/OnBoardingPic01.png")}
+          resizeMode="stretch"
+          style={{ width: 356, height: 410 }}
+        />
       </View>
 
       {/* <Image
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "left",
     marginLeft: 30,
-    marginTop: 30,
+    marginTop: 0,
     fontFamily: "SFUIText-Regular",
     fontSize: 24,
     color: "#5A5A5A",
@@ -86,13 +90,13 @@ const styles = StyleSheet.create({
   container3: {
     alignItems: "right",
     marginLeft: 74,
-    marginTop: 80,
+    marginTop: 60,
   },
 
   container4: {
     alignItems: "center",
     marginLeft: 62,
-    marginTop: 30,
+    marginTop: 20,
     fontFamily: "SFUIText-Light",
     fontSize: 14,
     color: "#5A5A5A",

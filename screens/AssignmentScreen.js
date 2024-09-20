@@ -39,19 +39,54 @@ const AssignmentScreen = ({ navigation }) => {
         <Text style={styles.sectionTitle}>Weekly Assignment Score</Text>
         <View style={styles.scoreContainer}>
           <View style={styles.bar}>
-            <Image source={require("@/assets/pics/Bar01.png")} />
+            <Image
+              source={require("@/assets/pics/Bar01.png")}
+              style={{
+                width: 82,
+                height: 82,
+              }}
+              resizeMode="stretch"
+            />
           </View>
           <View style={styles.bar}>
-            <Image source={require("@/assets/pics/Bar02.png")} />
+            <Image
+              source={require("@/assets/pics/Bar02.png")}
+              style={{
+                width: 82,
+                height: 123,
+              }}
+              resizeMode="stretch"
+            />
           </View>
           <View style={styles.bar}>
-            <Image source={require("@/assets/pics/Bar03.png")} />
+            <Image
+              source={require("@/assets/pics/Bar03.png")}
+              style={{
+                width: 82,
+                height: 162,
+              }}
+              resizeMode="stretch"
+            />
           </View>
           <View style={styles.bar}>
-            <Image source={require("@/assets/pics/Bar04.png")} />
+            <Image
+              source={require("@/assets/pics/Bar04.png")}
+              style={{
+                width: 82,
+                height: 144,
+              }}
+              resizeMode="stretch"
+            />
           </View>
           <View style={styles.bar}>
-            <Image source={require("@/assets/pics/Bar05.png")} />
+            <Image
+              source={require("@/assets/pics/Bar05.png")}
+              style={{
+                width: 82,
+                height: 184,
+              }}
+              resizeMode="stretch"
+            />
           </View>
         </View>
         <View style={styles.scoreDate}>
@@ -122,7 +157,14 @@ const AssignmentScreen = ({ navigation }) => {
           imageStyle={{ borderRadius: 10 }}
         >
           <View style={styles.skills}>
-            <Image source={require("@/assets/pics/Skills.png")} />
+            <Image
+              source={require("@/assets/pics/Skills.png")}
+              style={{
+                width: 170,
+                height: 170,
+              }}
+              resizeMode="stretch"
+            />
           </View>
           <Text style={styles.skillsText}>60%</Text>
           <Text style={styles.boxTitle}>Skills</Text>
@@ -320,7 +362,7 @@ const styles = StyleSheet.create({
     marginLeft: 33,
   },
   skills: {
-    marginLeft: 20,
+    marginLeft: 25,
   },
   skillsText: {
     fontFamily: "SFUIText-Bold",
