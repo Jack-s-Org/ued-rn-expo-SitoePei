@@ -40,7 +40,7 @@ const OnBoardingScreen03 = ({ navigation }) => {
               source={require("@/assets/pics/OnBoardingSwipe02.png")}
               style={{
                 // opacity: pressed ? 0.8 : 1,
-                marginTop: 20,
+                marginTop: 36,
               }}
             />
           </Pressable>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
 
   container2: {
-    marginTop: 80,
+    marginTop: 88,
     textAlign: "center",
     fontFamily: "SFUIText-Bold",
     fontSize: 16,

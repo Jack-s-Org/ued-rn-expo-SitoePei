@@ -15,7 +15,11 @@ const OnBoardingScreen04 = ({ navigation }) => {
       >
         <View style={{ alignItems: "center" }}>
           <View style={styles.container3}>
-            <Image source={require("@/assets/pics/OnBoardingPic04.png")} />
+            <Image
+              source={require("@/assets/pics/OnBoardingPic04.png")}
+              resizeMode="stretch"
+              style={{ width: 360, height: 455 }}
+            />
           </View>
 
           {/* <Image
@@ -39,7 +43,7 @@ const OnBoardingScreen04 = ({ navigation }) => {
               source={require("@/assets/pics/OnBoardingSwipe03.png")}
               style={{
                 // opacity: pressed ? 0.8 : 1,
-                marginTop: 20,
+                marginTop: 35,
               }}
             />
           </Pressable>
@@ -58,11 +62,11 @@ const styles = StyleSheet.create({
 
   container3: {
     alignItems: "center",
-    marginTop: 120,
+    marginTop: 110,
   },
 
   container2: {
-    marginTop: 20,
+    marginTop: 18,
     textAlign: "center",
     fontFamily: "SFUIText-Bold",
     fontSize: 16,

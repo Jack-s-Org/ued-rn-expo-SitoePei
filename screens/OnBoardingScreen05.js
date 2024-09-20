@@ -7,7 +7,11 @@ const OnBoardingScreen05 = ({ navigation }) => {
     <SafeAreaView style={styles.bgcolor}>
       <View style={{ alignItems: "center" }}>
         <View style={styles.container3}>
-          <Image source={require("@/assets/pics/OnBoardingPic05.png")} />
+          <Image
+            source={require("@/assets/pics/OnBoardingPic05.png")}
+            resizeMode="stretch"
+            style={{ width: 430, height: 580 }}
+          />
         </View>
 
         {/* <Image
@@ -32,7 +36,7 @@ const OnBoardingScreen05 = ({ navigation }) => {
             source={require("@/assets/pics/get-started-button.png")}
             style={{
               // opacity: pressed ? 0.8 : 1,
-              marginTop: 20,
+              marginTop: 0,
             }}
           />
         </Pressable>
@@ -50,11 +54,11 @@ const styles = StyleSheet.create({
 
   container3: {
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 50,
   },
 
   container2: {
-    marginTop: -140,
+    marginTop: -135,
     textAlign: "center",
     fontFamily: "SFUIText-Bold",
     fontSize: 16,
