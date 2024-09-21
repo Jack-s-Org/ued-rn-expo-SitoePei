@@ -171,28 +171,109 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View
-          style={{ flex: 1, flexDirection: "column", alignItems: "center" }}
+          style={{
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            height: "100%",
+          }}
         >
           <View
             style={{
               flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
+              width: "100%",
             }}
           >
             <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 32,
-                  // borderLeftWidth: 1,
-                  // borderTopWidth: 1,
-                }
-              }
+              onTouchStart={() => this.stroke("C")}
+              onTouchEnd={() => this.stop("C")}
+              style={styles.pianoWhiteKey}
             >
-              <Image source={require("@/assets/pics/WhiteUpperKeyBig.png")} />
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/CBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
             </View>
+
+            <View
+              onTouchStart={() => this.stroke("D")}
+              onTouchEnd={() => this.stop("D")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/DBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+            <View
+              onTouchStart={() => this.stroke("E")}
+              onTouchEnd={() => this.stop("E")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/EBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+            <View
+              onTouchStart={() => this.stroke("F")}
+              onTouchEnd={() => this.stop("F")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/FBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+            <View
+              onTouchStart={() => this.stroke("G")}
+              onTouchEnd={() => this.stop("G")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/GBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+            <View
+              onTouchStart={() => this.stroke("A")}
+              onTouchEnd={() => this.stop("A")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/ABottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+            <View
+              onTouchStart={() => this.stroke("B")}
+              onTouchEnd={() => this.stop("B")}
+              style={styles.pianoWhiteKey}
+            >
+              <Image
+                style={{ width: "100%", height: "100%" }}
+                source={require("@/assets/pics/BBottomWhiteKey.png")}
+                resizeMode="stretch"
+              />
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              width: "100%",
+              paddingHorizontal: "5.2%",
+              position: "absolute",
+            }}
+          >
             <View
               onTouchStart={() => this.stroke("Cs")}
               onTouchEnd={() => this.stop("Cs")}
@@ -208,18 +289,7 @@ export default class App extends React.Component {
             >
               <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
-            <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 16,
-                  // borderTopWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/WhiteUpperKey.png")} />
-            </View>
+
             <View
               onTouchStart={() => this.stroke("Ds")}
               onTouchEnd={() => this.stop("Ds")}
@@ -235,31 +305,17 @@ export default class App extends React.Component {
             >
               <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
+
             <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 32,
-                  // borderTopWidth: 1,
-                }
-              }
+              onTouchStart={() => this.stroke("Ds")}
+              onTouchEnd={() => this.stop("Ds")}
+              style={{
+                opacity: 0,
+              }}
             >
-              <Image source={require("@/assets/pics/WhiteUpperKeyRight.png")} />
+              <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
-            <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 32,
-                  // borderTopWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/WhiteUpperKeyBig.png")} />
-            </View>
+
             <View
               onTouchStart={() => this.stroke("Fs")}
               onTouchEnd={() => this.stop("Fs")}
@@ -274,18 +330,7 @@ export default class App extends React.Component {
             >
               <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
-            <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 16,
-                  // borderTopWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/WhiteUpperKey.png")} />
-            </View>
+
             <View
               onTouchStart={() => this.stroke("Gs")}
               onTouchEnd={() => this.stop("Gs")}
@@ -300,18 +345,7 @@ export default class App extends React.Component {
             >
               <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
-            <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 16,
-                  // borderTopWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/WhiteUpperKey.png")} />
-            </View>
+
             <View
               onTouchStart={() => this.stroke("As")}
               onTouchEnd={() => this.stop("As")}
@@ -326,134 +360,6 @@ export default class App extends React.Component {
             >
               <Image source={require("@/assets/pics/PianoSharpKey.png")} />
             </View>
-            <View
-              style={
-                {
-                  // backgroundColor: "white",
-                  // height: 100,
-                  // width: 32,
-                  // borderRightWidth: 1,
-                  // borderTopWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/WhiteUpperKeyRight.png")} />
-            </View>
-          </View>
-
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <View
-              onTouchStart={() => this.stroke("C")}
-              onTouchEnd={() => this.stop("C")}
-              style={
-                {
-                  // backgroundColor: this.state.colorC,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/CBottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("D")}
-              onTouchEnd={() => this.stop("D")}
-              style={
-                {
-                  // backgroundColor: this.state.colorD,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/DBottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("E")}
-              onTouchEnd={() => this.stop("E")}
-              style={
-                {
-                  // backgroundColor: this.state.colorE,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/EBottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("F")}
-              onTouchEnd={() => this.stop("F")}
-              style={
-                {
-                  // backgroundColor: this.state.colorF,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/FBottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("G")}
-              onTouchEnd={() => this.stop("G")}
-              style={
-                {
-                  // backgroundColor: this.state.colorG,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/GBottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("A")}
-              onTouchEnd={() => this.stop("A")}
-              style={
-                {
-                  // backgroundColor: this.state.colorA,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/ABottomWhiteKey.png")} />
-            </View>
-            <View
-              onTouchStart={() => this.stroke("B")}
-              onTouchEnd={() => this.stop("B")}
-              style={
-                {
-                  // backgroundColor: this.state.colorB,
-                  // height: 100,
-                  // width: 48,
-                  // borderBottomWidth: 1,
-                  // borderLeftWidth: 1,
-                  // borderRightWidth: 1,
-                }
-              }
-            >
-              <Image source={require("@/assets/pics/BBottomWhiteKey.png")} />
-            </View>
           </View>
         </View>
       </View>
@@ -466,7 +372,11 @@ const styles = StyleSheet.create({
     // flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF",
     flexDirection: "row",
+    height: 258,
+  },
+  pianoWhiteKey: {
+    width: "14.285%",
+    height: "100%",
   },
 });

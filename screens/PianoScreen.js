@@ -18,57 +18,50 @@ const PianoScreen = ({ navigation }) => {
     >
       <View style={styles.header}>
         <Image source={require("@/assets/pics/BgHeader.png")} />
-      </View>
 
-      <View style={styles.iconContainer}>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/MenuIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/ToolsIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/RecordIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/BackwardIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/PlayIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/BackIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
-        </View>
-        <View style={styles.icon}>
-          <Image
-            source={require("@/assets/pics/NextIcon.png")}
-            resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
-          />
+        <View style={styles.iconContainer}>
+          <View style={styles.icon}>
+            <Image
+              source={require("@/assets/pics/MenuIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/ToolsIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/RecordIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/BackwardIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/BackwardIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/PlayIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/BackIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+            <Image
+              source={require("@/assets/pics/NextIcon.png")}
+              resizeMode="stretch"
+              style={styles.ImgeButton}
+            />
+          </View>
         </View>
       </View>
 
@@ -196,44 +189,52 @@ const PianoScreen = ({ navigation }) => {
         <Piano></Piano>
       </View>
 
-      <View style={styles.pianoBox}>
-        <Image source={require("@/assets/pics/PianoOrangeBox.png")} />
-      </View>
-
-      <View style={styles.effectsButton}>
-        <Image source={require("@/assets/pics/EffectsButton.png")} />
-      </View>
-
-      <View style={styles.instrumentType}>
-        <Image source={require("@/assets/pics/InstrumentType.png")} />
-      </View>
-
-      <View style={styles.leftButton}>
-        <Image source={require("@/assets/pics/LeftArrow.png")} />
-      </View>
-
-      <View style={styles.rightButton}>
-        <Image source={require("@/assets/pics/RightArrow.png")} />
-      </View>
-
-      <Pressable
-        onPress={() => {
-          navigation.replace("Main", { screen: "Home" });
+      <View
+        style={{
+          width: "100%",
+          height: 95,
+          backgroundColor: "#FF9500",
+          position: "absolute",
+          bottom: 255,
+          rowGap: 16,
+          paddingVertical: 16,
         }}
       >
-        <View style={styles.whiteCloseButton}>
-          <Image source={require("@/assets/pics/WhiteCloseButton.png")} />
+        <Pressable
+          onPress={() => {
+            navigation.replace("Main", { screen: "Home" });
+          }}
+        >
+          <View style={styles.whiteCloseButton}>
+            <Image source={require("@/assets/pics/WhiteCloseButton.png")} />
+          </View>
+        </Pressable>
+
+        <View style={styles.menuBar}>
+          <View style={styles.instrumentType}>
+            <Image source={require("@/assets/pics/InstrumentType.png")} />
+            <Image source={require("@/assets/pics/LeftArrow.png")} />
+            <Image source={require("@/assets/pics/RightArrow.png")} />
+          </View>
+
+          <View>
+            <Image source={require("@/assets/pics/EffectsButton.png")} />
+          </View>
         </View>
-      </Pressable>
+      </View>
     </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  ImgeButton: {
+    width: "22%",
+    aspectRatio: 1,
+    marginHorizontal: 0,
+  },
   image: {
-    // flex: 1,
     resizeMode: "cover",
-    width: 432,
+    width: "100%",
     height: 932,
   },
   text: {
@@ -248,15 +249,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-end",
-    marginRight: 40,
     marginLeft: 0,
     marginTop: -15,
   },
   icon: {
-    width: 62,
+    width: "100%",
     borderRadius: 12,
     marginTop: -90,
-    marginRight: -20,
+    paddingHorizontal: 24,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
   },
   timeline: {
     marginTop: 2,
@@ -301,24 +303,20 @@ const styles = StyleSheet.create({
   pianoBox: {
     marginTop: -93,
   },
-  effectsButton: {
-    marginTop: -44,
-    marginLeft: 290,
-  },
   instrumentType: {
-    marginTop: -34,
-    marginLeft: 23,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    columnGap: 16,
   },
-  leftButton: {
-    marginTop: -24,
-    marginLeft: 164,
-  },
-  rightButton: {
-    marginTop: -15,
-    marginLeft: 195,
+  menuBar: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingHorizontal: 25,
+    width: "100%",
+    alignItems: "center",
   },
   whiteCloseButton: {
-    marginTop: -58,
     marginLeft: 22,
   },
 });

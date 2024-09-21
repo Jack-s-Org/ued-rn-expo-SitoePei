@@ -25,49 +25,42 @@ const HomeScreen = ({ navigation }) => {
           <Image
             source={require("@/assets/pics/MenuIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
           <Image
             source={require("@/assets/pics/ToolsIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
           <Image
             source={require("@/assets/pics/RecordIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
           <Image
             source={require("@/assets/pics/BackwardIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
+          <Image
+            source={require("@/assets/pics/BackwardIcon.png")}
+            resizeMode="stretch"
+            style={styles.ImgeButton}
+          />
           <Image
             source={require("@/assets/pics/PlayIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
           <Image
             source={require("@/assets/pics/BackIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
-        </View>
-        <View style={styles.icon}>
           <Image
             source={require("@/assets/pics/NextIcon.png")}
             resizeMode="stretch"
-            style={{ width: 85, height: 85, marginTop: -10 }}
+            style={styles.ImgeButton}
           />
         </View>
       </View>
@@ -202,10 +195,14 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  ImgeButton: {
+    width: "22%",
+    aspectRatio: 1,
+    marginHorizontal: 0,
+  },
   image: {
-    // flex: 1,
     resizeMode: "cover",
-    width: 432,
+    width: "100%",
     height: 932,
   },
   text: {
@@ -220,15 +217,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-end",
-    marginRight: 40,
     marginLeft: 0,
     marginTop: -15,
   },
   icon: {
-    width: 62,
+    width: "100%",
     borderRadius: 12,
     marginTop: -90,
-    marginRight: -20,
+    paddingHorizontal: 24,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
   },
   timeline: {
     marginTop: 2,
