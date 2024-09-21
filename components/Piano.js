@@ -1,7 +1,24 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import A_Note from "@/assets/audio/A.mp3";
+import As_Note from "@/assets/audio/As.mp3";
+import B_Note from "@/assets/audio/B.mp3";
+import C_Note from "@/assets/audio/C.mp3";
+import Cs_Note from "@/assets/audio/Cs.mp3";
+import D_Note from "@/assets/audio/D.mp3";
+import Ds_Note from "@/assets/audio/Ds.mp3";
+import E_Note from "@/assets/audio/E.mp3";
+import F_Note from "@/assets/audio/F.mp3";
+import Fs_Note from "@/assets/audio/Fs.mp3";
+import G_Note from "@/assets/audio/G.mp3";
+import Gs_Note from "@/assets/audio/Gs.mp3";
+import { Audio } from "expo-av";
 
 // import Sound from 'react-native-sound';
+const playSound = async (snd) => {
+  const { sound } = await Audio.Sound.createAsync(snd);
+  await sound.playAsync();
+};
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,44 +51,57 @@ export default class App extends React.Component {
     //   })
     // });
   }
+
   stroke(note) {
     // change backgroundColor
     switch (note) {
       case "C":
         this.setState({ colorC: "rgba(1, 1, 1, 0.1)" });
+        playSound(C_Note);
         break;
       case "Cs":
         this.setState({ colorCs: "rgba(0, 0, 0, 0.5)" });
+        playSound(Cs_Note);
         break;
       case "D":
         this.setState({ colorD: "rgba(1, 1, 1, 0.1)" });
+        playSound(D_Note);
         break;
       case "Ds":
         this.setState({ colorDs: "rgba(0, 0, 0, 0.5)" });
+        playSound(Ds_Note);
         break;
       case "E":
         this.setState({ colorE: "rgba(1, 1, 1, 0.1)" });
+        playSound(E_Note);
         break;
       case "F":
         this.setState({ colorF: "rgba(1, 1, 1, 0.1)" });
+        playSound(F_Note);
         break;
       case "Fs":
         this.setState({ colorFs: "rgba(0, 0, 0, 0.5)" });
+        playSound(Fs_Note);
         break;
       case "G":
         this.setState({ colorG: "rgba(1, 1, 1, 0.1)" });
+        playSound(G_Note);
         break;
       case "Gs":
         this.setState({ colorGs: "rgba(0, 0, 0, 0.5)" });
+        playSound(Gs_Note);
         break;
       case "A":
         this.setState({ colorA: "rgba(1, 1, 1, 0.1)" });
+        playSound(A_Note);
         break;
       case "As":
         this.setState({ colorAs: "rgba(0, 0, 0, 0.5)" });
+        playSound(As_Note);
         break;
       case "B":
         this.setState({ colorB: "rgba(1, 1, 1, 0.1)" });
+        playSound(B_Note);
         break;
     }
 

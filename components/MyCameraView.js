@@ -59,11 +59,11 @@ export default function App() {
               source={require("@/assets/pics/FlipCamera.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={takePicture}>
+          <TouchableOpacity onPress={takePicture} style={styles.button02}>
             <Image
-              style={styles.button02}
               resizeMode="contain"
               source={require("@/assets/pics/SnapButton.png")}
+              style={{ width: "100%", height: "100%" }}
             />
           </TouchableOpacity>
         </View>
@@ -122,11 +122,8 @@ const styles = StyleSheet.create({
   },
   button02: {
     flex: 1,
-    // alignSelf: "flex-end",
-    alignItems: "center",
-    marginTop: 580,
-    position: "absolute",
-    marginLeft: 92,
+    alignSelf: "center",
+    marginTop: 600,
     width: 90,
     height: 90,
   },

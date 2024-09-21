@@ -47,7 +47,8 @@ const SignInScreen = ({ navigation }) => {
           style={{
             // opacity: pressed ? 0.8 : 1,
             marginTop: 20,
-            marginLeft: 110,
+            // marginLeft: 110,
+            alignSelf: "center",
           }}
         />
       </Pressable>

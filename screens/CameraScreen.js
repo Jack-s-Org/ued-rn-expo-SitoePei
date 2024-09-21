@@ -62,26 +62,26 @@ const CameraScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <MyCameraView />
-      <Pressable
-        onPress={() => {
-          navigation.replace("Main");
-        }}
-      >
-        <View style={styles.backButton}>
+
+      <View style={styles.backButton}>
+        <Pressable
+          onPress={() => {
+            navigation.replace("Main");
+          }}
+        >
           <Image
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: 40, height: 40 }}
             resizeMode="stretch"
             source={require("@/assets/pics/BackButton.png")}
           />
-        </View>
-      </Pressable>
-      <View style={styles.flash}>
+        </Pressable>
         <Image
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: 25, height: 35 }}
           resizeMode="stretch"
           source={require("@/assets/pics/FlashIcon.png")}
         />
       </View>
+
       {bluetooth ? (
         <View
           style={{
@@ -231,9 +231,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backButton: {
-    marginLeft: 30,
-    width: 40,
-    height: 40,
+    width: 358,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginHorizontal: "auto",
   },
   flash: {
     marginLeft: 375,
